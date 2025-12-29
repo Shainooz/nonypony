@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 18th ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page center">
+
+  <!-- Music Button -->
+  <button id="music-btn">Play music 🎵</button>
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating hearts -->
+  <div class="floating" style="left:10%;">❤️</div>
+  <div class="floating" style="left:30%; animation-delay:2s;">✨</div>
+  <div class="floating" style="left:50%; animation-delay:4s;">❤️</div>
+  <div class="floating" style="left:70%; animation-delay:6s;">✨</div>
+
+  <h1>Happy 18th Birthday ❤️</h1>
+
+  <p class="soft">
+    Today is about you —  
+    and how grateful I am that you exist.
+  </p>
+
+  <a href="gratitude.html" class="button">Continue →</a>
+
+  <script>
+    const btn = document.getElementById("music-btn");
+    const music = document.getElementById("bg-music");
+
+    btn.onclick = () => {
+      if (music.paused) {
+        music.play();
+        btn.textContent = "Pause music ⏸";
+      } else {
+        music.pause();
+        btn.textContent = "Play music 🎵";
+      }
+    };
+  </script>
+
+</body>
+</html>
